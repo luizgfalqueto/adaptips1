@@ -122,6 +122,8 @@ class MovieController extends Controller
      */
     public function search(Request $request)
     {
-        dd($request->all());
+        $movies = Movie::where('title', 'LIKE', "%{$request->search}%")->get();
+
+        return view('movies', compact('movies'));
     }
 }

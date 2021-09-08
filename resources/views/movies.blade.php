@@ -7,6 +7,13 @@
     <title>Movies | Adapti</title>
 </head>
 <body>
+    <div id="search-container" style="width: 500px">
+        <form action="{{ route('movie.search') }}" method="post">
+            @csrf
+            <input type="text" name="search" placeholder="Buscar filme">
+            <button type="submit">Pesquisar</button>
+        </form>
+    </div>
     <a href="{{ route('movie.create') }}"><button>Criar</button></a>
     @foreach ($movies as $movie)
         <h4>{{ $movie->title }}</h4>
