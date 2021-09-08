@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movies | Adapti</title>
 </head>
 <body>
-    <div style="background-color: #aaacad">
-        
-        @foreach ($movies as $movie)
-            <h2> Titulo: {{ $movie->title }} </h2>
-            <h4> &nbsp &nbsp Genero: {{ $movie->genre }} </h4>
-            <h4> &nbsp &nbsp Lançamento: {{ $movie->release }} </h4>
-            <h4> &nbsp &nbsp Sinopse: {{ $movie->synopsis }} </h4>
-            <h4> &nbsp &nbsp País: {{ $movie->country->country }} </h4>
-            <h4> &nbsp &nbsp Avaliação: {{ $movie->rating }} </h4>
-            
-        @endforeach
-        
-    </div>
+    <a href="{{ route('movie.create') }}"><button>Criar</button></a>
+    @foreach ($movies as $movie)
+        <h4>{{ $movie->title }}</h4>
+        <p>{{ $movie->country->name }}</p>
+        <p>{{ $movie->genre }}</p>
+        <p>{{ $movie->synopsis }}</p>
+        <img src="storage/{{ $movie->image }}" alt="Imagem" width="80" height="100"/>
+        <a href="{{ route('movie.edit', $movie->id) }}">Editar</a>
+        <form action="{{ route('movie.destroy',$movie->id)}}" method="post">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Deletar</button>
+        </form>
+    @endforeach
 </body>
 </html>

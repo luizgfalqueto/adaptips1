@@ -14,4 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/movie', MovieController::class);
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::resource('movie', MovieController::class);

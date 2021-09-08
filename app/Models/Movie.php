@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Country;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,10 +10,17 @@ class Movie extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','genre','id_country','release','synopsis','rating','image'];
-    
-    public function country()
-    {
-        return $this->belongsTo(Country::class,'id_country');
+    protected $fillable = [
+        'title',
+        'release',
+        'genre',
+        'synopsis',
+        'rating',
+        'image',
+        'country_id'
+    ];
+
+    public function country() {
+        return $this->belongsTo(Country::class);
     }
 }
