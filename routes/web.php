@@ -14,9 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::post('movie.search', [MovieController::class, 'search'])->name('movie.search');
 Route::resource('movie', MovieController::class);

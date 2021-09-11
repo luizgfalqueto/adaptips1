@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App\Models\Movie;
 use App\Models\Country;
 use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\Storage;
 
 class MovieController extends Controller
@@ -110,6 +109,7 @@ class MovieController extends Controller
         if(!$movie = Movie::find($id))
             return redirect()->back();
         
+        Storage::delete('public/' .$movie->image);
         $movie->delete();
         return redirect()->route('movie.index');
     }
@@ -124,6 +124,11 @@ class MovieController extends Controller
     {
         $movies = Movie::where('title', 'LIKE', "%{$request->search}%")->get();
 
-        return view('movies', compact('movies'));
+        if($movies){
+            return view('movies', compact('movies'));
+        }else{
+            return view('movies', compact("Não foi encontrado nenhum filme!"));
+        }
+
     }
 }
