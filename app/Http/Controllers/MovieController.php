@@ -16,7 +16,7 @@ class MovieController extends Controller
     public function index()
     {
         $movies = Movie::all();
-        return view('movies', compact('movies'));
+        return view('index', compact('movies'));
     }
 
     /**
@@ -125,9 +125,9 @@ class MovieController extends Controller
         $movies = Movie::where('title', 'LIKE', "%{$request->search}%")->get();
 
         if($movies){
-            return view('movies', compact('movies'));
+            return view('index', compact('movies'));
         }else{
-            return view('movies', compact("Não foi encontrado nenhum filme!"));
+            return view('index', compact("Não foi encontrado nenhum filme!"));
         }
 
     }
