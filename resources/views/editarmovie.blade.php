@@ -17,6 +17,11 @@
         <input class="input-movie" value="{{ $movie->rating }}"type="text" name="rating" placeholder="Nota" required>
         <textarea class="textarea-synopsis" name="synopsis" id="synopsis" cols="30" rows="10">{{ $movie->synopsis }}</textarea>
         <input class="input-movie" value="storage/{{ $movie->image }}" type="file" name="image" accept="image/*">
-        <button class="save-button" type="submit">Salvar</button>
+        <button class="save-button" type="submit">EDITAR FILME</button>
+    </form>
+    <form class="delete-form" action="{{ route('movie.destroy',$movie->id)}}" method="post">
+        @csrf
+        @method('DELETE')
+        <button class="delete-button" type="submit">DELETAR FILME</button>
     </form>
 @endsection

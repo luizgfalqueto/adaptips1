@@ -10,13 +10,6 @@
     <nav class="navbar-container">
         @yield('navbar-content')
         <h1 class="titulo">Adapti Filmes</h1>
-        <div class="search-container" style="width: 500px">
-            <form class="form-search" action="{{ route('movie.search') }}" method="post">
-                @csrf
-                <input class="search-input" type="text" name="search" placeholder="PESQUISAR">
-                <button class="search-button" type="submit">Pesquisar</button>
-            </form>
-        </div>
         <a class="back-button" href="{{ route('movie.index') }}">Inicio</a>
         <a class="create-button" href="{{ route('movie.create') }}"><button>ADICIONAR FILMES</button></a>
     </nav>
