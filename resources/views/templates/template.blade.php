@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="template.css">
     <title>@yield('Template')</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
     </div>
     <footer class="footer-container">
         @yield('footer-content')
-        <p class="development">Desenvolvido com amor 2021 Adapti-Soluções Web</p>
+        <p class="development">Desenvolvido com ❤ 2021 Adapti-Soluções Web</p>
         <a class="facebook-adapti" href="https://www.facebook.com/AdaptiEmpresaJr">Facebook</a>
         <a class="instagram-adapti" href="https://www.instagram.com/adaptiempresajr/">Instagram</a>
         <a class="linkedin-adapti" href="https://www.linkedin.com/company/adaptiempresajr/">Linkedin</a>

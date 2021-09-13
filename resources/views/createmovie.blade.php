@@ -31,6 +31,6 @@
         <button class="create-button" type="submit">CRIAR FILME</button>
     </form>
     
-    <a class="back-button" href="{{ route('movie.index') }}">VOLTAR</a>
+    <a class="back-button" href="{{ route('movie.index') }}"><button>VOLTAR</button></a>
 
 @endsection
