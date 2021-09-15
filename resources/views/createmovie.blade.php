@@ -2,14 +2,22 @@
 
 @section('Template', 'Adicionar Filme | Adapti PS')
 
+@section('home')
+    <li><a class="back-button" href="{{ route('movie.index') }}">Inicio</a></li>
+@endsection
+
 @section('content')
+    <div class="title">
+        <h2>Formulário de cadastro de filme</h2>
+    </div>
     <form class="form-crud" action="{{ route('movie.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
+    
         <label for="title">Nome do filme</label>
         <input id="title" class="input-form" type="text" name="title" placeholder="Titulo" required>
-
+        
         <label for="genre">Gênero</label>
-        <input id="genre" class="input-form" type="text" name="genre" placeholder="Genero" required>
+        <input id="genre" class="input-form" type="text" name="genre" placeholder="Gênero" required>
 
         <label for="release">Data de lançamento</label>
         <input id="release" class="input-form" type="date" name="release" placeholder="Lançamento" required>
@@ -30,8 +38,8 @@
 
         <input class="input-movie" type="file" name="image" accept="image/*" required>
 
-        <button class="button-form" type="submit">CRIAR FILME</button>
-        <a class="buttonback-form" href="{{ route('movie.index') }}">VOLTAR</a>
+        <button class="button-form" type="submit">Salvar</button>
+        <a class="buttonback-form" href="{{ route('movie.index') }}">Voltar</a>
     </form>
     
 @endsection

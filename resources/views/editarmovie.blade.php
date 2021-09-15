@@ -2,7 +2,14 @@
 
 @section('Template', 'Editar Filme | Adapti PS')
 
+@section('home')
+    <li><a class="back-button" href="{{ route('movie.index') }}">Inicio</a></li>
+@endsection
+
 @section('content')
+    <div class="title">
+        <h2>Formulário de edição de filme</h2>
+    </div>
     <form class="form-crud" action="{{ route('movie.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <label for="title">Nome do filme</label>
@@ -30,16 +37,10 @@
 
         <label for="image">Imagem</label>
         <input class="input-movie" id="image" type="file" name="image" accept="image/*" required>
-        <img src="/storage/{{ $movie->image }}" style="width:100px;height:100px;" alt="poster do filme {{$movie->title}}">
+        <img class="img-movie" src="/storage/{{ $movie->image }}" alt="poster do filme {{$movie->title}}">
 
-        <button class="button-form" type="submit">EDITAR FILME</button>
-        <a class="buttonback-form" href="{{ route('movie.index') }}">VOLTAR</a>
-    </form>
-
-    <form class="delete-form" action="{{ route('movie.destroy',$movie->id)}}" method="post">
-        @csrf
-        @method('DELETE')
-        <button class="delete-button" type="submit">DELETAR FILME</button>
+        <button class="button-form" type="submit">Salvar</button>
+        <a class="buttonback-form" href="{{ route('movie.index') }}">Voltar</a>
     </form>
 
 @endsection
