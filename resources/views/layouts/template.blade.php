@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="shortcut icon" type="imagex/png" href="/images/logo-adapti.png">
     <link rel="stylesheet" href="/css/template.css">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +16,7 @@
 </head>
 <body>
     <header class="header-container">
+        <img class="logo-adapti" src="/images/logo-adapti.png" alt="logo-adapti">
         <h6 class="titulo">Adapti Filmes</h6>
 
         <nav class="nav-container">
