@@ -51,6 +51,7 @@ li {
 .main-container {
     background-color: #464C4B;
     flex-wrap: wrap;
+    height: 100%;
 }
 
 .footer-container {
@@ -59,7 +60,7 @@ li {
     align-items: center;
     background-image: linear-gradient(to top, #202020, #4b5251);
     height: 10vh;
-    position: inherit;
+    bottom: 0;
 }
 
 .footer-container .development {

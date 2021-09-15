@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="shortcut icon" type="imagex/png" href="/images/logo-adapti.png">
+    <link rel="stylesheet" href="/css/forms.css">
     <link rel="stylesheet" href="/css/template.css">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +22,9 @@
 
         <nav class="nav-container">
             <ul class="nav-items">
-                <li><a class="back-button" href="{{ route('movie.index') }}">Inicio</a></li>
-                <li><a class="create-button" href="{{ route('movie.create') }}">Adicionar filmes</a></li>
+                {{-- <li><a class="back-button" href="{{ route('movie.index') }}">Inicio</a></li> --}}
+                @yield('home')
+                <li><a class="create-button" href="{{ route('movie.create') }}">Adicionar filme</a></li>
             </ul>
         </nav>
     </header>
