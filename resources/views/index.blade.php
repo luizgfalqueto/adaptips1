@@ -31,7 +31,7 @@
                     </div>
                 </div>
 
-                <img class="image-content" alt="poster do filme" src="storage/{{$movie->first()->image}}">
+                <img class="image-content" alt="poster do filme" src="storage/{{$movies->first()->image}}">
 
                 <div class="info-container">
                     <p class="specify genre">{{ $movie->genre }}</p>
