@@ -4,18 +4,23 @@
     border: 0;
 }
 
-.title {
-    /* width: 100%; */
+.div-form {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
     padding-top: 2em;
-    margin-left: 31em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 2em;
+}
+
+.div-form h2 {
+    text-align: center;
     color: whitesmoke;
 }
 
 .form-crud {
-    border: 0;
     display: grid; 
     justify-content: center;
+    align-items: center;
 }
 
 .form-crud label {

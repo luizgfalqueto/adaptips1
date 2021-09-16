@@ -17,12 +17,13 @@
 </head>
 <body>
     <header class="header-container">
-        <img class="logo-adapti" src="/images/logo-adapti.png" alt="logo-adapti">
-        <h6 class="titulo">Adapti Filmes</h6>
+        <div class="div-logo-titulo">
+            <img class="logo-adapti" src="/images/logo-adapti.png" alt="logo-adapti">
+            <h6 class="titulo">Adapti Filmes</h6>
+        </div>
 
         <nav class="nav-container">
             <ul class="nav-items">
-                {{-- <li><a class="back-button" href="{{ route('movie.index') }}">Inicio</a></li> --}}
                 @yield('home')
                 <li><a class="create-button" href="{{ route('movie.create') }}">Adicionar filme</a></li>
             </ul>

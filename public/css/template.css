@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    border: 0;
 }
 
 .header-container {
@@ -12,15 +13,22 @@
     height: 11vh;
 }
 
-.logo-adapti {
+.div-logo-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-logo-titulo .logo-adapti {
     width: 80px;
     height: 80px;
     margin-left: 5em;
 }
 
-.header-container h6 {
+.div-logo-titulo h6 {
     color: whitesmoke;
     font-size: 1.9em;
+    margin-left: 1.3em;
 }
 
 .nav-items {
@@ -50,8 +58,6 @@ li {
 
 .main-container {
     background-color: #464C4B;
-    flex-wrap: wrap;
-    height: 100%;
 }
 
 .footer-container {
@@ -74,7 +80,7 @@ li {
 .footer-items {
     list-style: none;
     display: flex;
-    margin-right: 10%;
+    margin-right: 4em;
 }
 
 .footer-items li {
