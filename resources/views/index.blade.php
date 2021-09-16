@@ -6,8 +6,10 @@
     <div class="div-top">
         <form class="form-search" action="{{ route('movie.search') }}" method="post">
             @csrf
-            <input class="input-search" type="text" name="search" placeholder="Pesquisar um filme" required>
-            <button class="button-submit" type="submit"><img src="/icons/search.png" alt="pesquisar"></button>
+            <div class="div-search">
+                <input class="input-search" type="text" name="search" placeholder="Pesquisar um filme" required>
+                <button class="button-submit" type="submit"><img src="/icons/search.png" alt="pesquisar"></button>
+            </div>
         </form>
         
         <h1>Filmes</h1>
