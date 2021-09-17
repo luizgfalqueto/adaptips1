@@ -29,6 +29,7 @@
 .input-search, .button-submit {
     font-size: 1.4em;
     border-radius: .2em;
+    padding: .25em;
 }
 
 .button-submit {
@@ -37,7 +38,12 @@
     color: whitesmoke;
     transition: all .3s;
     border-style: none;
-    margin-left: .5em;
+    margin-left: .3em;
+}
+
+.button-submit:hover {
+    transform: scale(1.2);
+    transition: all .3s;
 }
 
 h1 {
@@ -47,15 +53,20 @@ h1 {
     font-size: 3em;
 }
 
+.main-container {
+    flex-direction: column;
+    justify-content: center;
+}
+
 .box-card {
     background-color: #464C4B;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    padding-left: 9vw;
-    margin-top: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
     margin-bottom: 0;
+    gap: 30px;
 }
 
 .top-card {
@@ -101,6 +112,10 @@ h1 {
     position: relative;
 }
 
+.card-movie:hover {
+    transform: scale(1.1);
+}
+
 .card-movie:hover .buttons-container {
     opacity: 1;
 }
@@ -136,4 +151,4 @@ h1 {
 .info-container .synopsis {
     text-align: justify;
     margin-right:  .3em;
-}
+} 
