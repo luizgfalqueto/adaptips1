@@ -37,13 +37,6 @@
     margin-right: 5em;
 }
 
-li {
-    position: relative;
-    display: flex;
-    letter-spacing: 3px;
-    margin-left: 32px;
-}
-
 .back-button, .create-button {
     color: whitesmoke;
     text-decoration: none;
@@ -51,9 +44,22 @@ li {
     transition: all .3s;
 }
 
-.back-button:hover, .create-button:hover{
+.create-button {
+    letter-spacing: 1px;
+    margin-left: 1em;
+    background-color: rgb(117, 117, 117);
+    padding: .3em;
+    border-radius: 5px;
+}
+
+.create-button:hover {
+    background-color: rgb(211, 211, 211);
+    color: black;
+    transition: all .3s;
+}
+
+.back-button:hover{
     color: #666666;
-    /* font-weight: 600; */
 }
 
 .main-container {
@@ -71,7 +77,7 @@ li {
 
 .footer-container .development {
     color: whitesmoke;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif, Georgia, 'Times New Roman', Times, serif;
     font-size: 1em;
     margin-left: 5em;
     font-weight: 600;
@@ -91,4 +97,73 @@ li {
 .footer-items a {
     color: whitesmoke;
     text-decoration: none;
+}
+
+.footer-items img:hover {
+    transform: scale(1.2);
+    transition: all .2s;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+
+    /* NAV */
+    .div-logo-titulo .logo-adapti {
+        width: 60px;
+        height: 60px;
+        margin-left: 3em;
+    }
+
+    .div-logo-titulo h6 {
+        font-size: 1.5em;
+    }
+
+    .back-button, .create-button {
+        font-size: 13px;
+    }
+
+    .nav-items {
+        margin-right: 1em;
+    }
+
+    .nav-items li {
+        margin-left: 1.5em;
+    }
+
+    /* FOOTER */
+    .footer-container .development {
+        margin-left: 2.5em;
+        font-size: .8em;
+    }
+
+    .footer-items {
+        margin-right: 2.5em;
+    }
+
+    .footer-items li {
+        letter-spacing: 2px;
+        margin-left: .9em;
+    }
+}
+
+@media (max-width: 950px) {
+    .create-button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 750px) {
+    .div-logo-titulo .logo-adapti {
+        width: 45px;
+        height: 45px;
+    }
+
+    .div-logo-titulo h6 {
+        margin-left: .5em;
+        font-size: 1.4em;
+    }
+
+    .nav-items a {
+        font-size: .8em;
+    }
 }
