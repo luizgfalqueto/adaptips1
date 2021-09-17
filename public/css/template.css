@@ -36,6 +36,12 @@
     margin-left: 5em;
 }
 
+.div-logo-titulo .logo-adapti:hover {
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 0.4s ease-in-out 0s;
+}
+
 .div-logo-titulo h6 {
     color: var(--color-letra);
     font-size: 1.9em;
@@ -53,13 +59,14 @@
     text-decoration: none;
     font-weight: 900;
     transition: all .3s;
+    padding: .5em;
 }
 
 .create-button {
     letter-spacing: 1px;
     margin-left: 1em;
     background-color: var(--color-background-create-button-navbar);
-    padding: .3em;
+    /* padding: .3em; */
     border-radius: 5px;
 }
 
