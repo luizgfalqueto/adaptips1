@@ -3,7 +3,7 @@
 @section('Template', 'Editar Filme | Adapti PS')
 
 @section('home')
-    <li><a class="back-button" href="{{ route('movie.index') }}">Inicio</a></li>
+    <li><a class="back-button" href="{{ route('movie.index') }}">Início</a></li>
 @endsection
 
 @section('content')

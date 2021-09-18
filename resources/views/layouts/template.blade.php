@@ -25,7 +25,7 @@
         <nav class="nav-container">
             <ul class="nav-items">
                 @yield('home')
-                <li><a class="create-button" href="{{ route('movie.create') }}">Adicionar filme</a></li>
+                <li><a class="create-button" href="{{ route('movie.create') }}"><button>Adicionar filme</button></a></li>
             </ul>
         </nav>
     </header>
