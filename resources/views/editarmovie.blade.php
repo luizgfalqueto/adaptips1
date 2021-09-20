@@ -12,8 +12,10 @@
         <div class="title-form">
             <h2>Formulário de edição de filme</h2>
         </div>
-        <form class="form-crud" action="{{ route('movie.store') }}" method="POST" enctype="multipart/form-data">
+        <form class="form-crud" action="{{ route('movie.update', $movie->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
+
             <label for="title">Nome do filme</label>
             <input id="title" class="input-form" type="text" name="title" value="{{ $movie->title }}" required>
     
@@ -38,7 +40,7 @@
             <textarea id="synopsis" class="input-form" name="synopsis" id="synopsis" cols="30" rows="10">{{ $movie->synopsis }}</textarea>
     
             <label for="image">Imagem</label>
-            <input class="input-movie" id="image" type="file" name="image" accept="image/*" required>
+            <input class="input-movie" id="image" type="file" name="image" accept="image/*">
             <img class="img-movie" src="/storage/{{ $movie->image }}" alt="poster do filme {{$movie->title}}">
     
             <button class="button-form" type="submit">Salvar</button>
