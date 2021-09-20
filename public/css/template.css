@@ -64,6 +64,10 @@
     font-weight: 700;
 }
 
+.back-button i {
+    margin-right: 2px;
+}
+
 .create-button button {
     padding: 8px;
     background-color: var(--color-bottom-navbar);
@@ -80,6 +84,10 @@
     -webkit-transition: color 150ms ease-in-out;
     transition: color 150ms ease-in-out;
     cursor: pointer;
+}
+
+.create-button i {
+    margin-right: 3px;
 }
 
 .create-button button:after {
@@ -101,6 +109,11 @@
 
 .create-button button:hover {
     color: var(--color-black);
+}
+
+.create-button:hover  i {
+    transform: rotate(360deg);
+    transition: all 0.4s ease-in-out 0s;
 }
 
 .create-button button:hover:after {
@@ -140,8 +153,9 @@
 }
 
 .footer-items li {
-    letter-spacing: 3px;
-    margin-left: 32px;
+    margin-left: 25px;
+    font-size: 27px;
+    color: whitesmoke;
 }
 
 .footer-items a {
@@ -149,7 +163,7 @@
     text-decoration: none;
 }
 
-.footer-items img:hover {
+.footer-items i:hover {
     transform: scale(1.2);
     transition: all .2s;
 }
@@ -190,15 +204,20 @@
         margin-right: 2.5em;
     }
 
-    .footer-items li {
-        letter-spacing: 2px;
-        margin-left: .9em;
+    .footer-items li i {
+        letter-spacing: 1px;
+        margin-left: 1px;
+        font-size: 19px;
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 990px) {
     .create-button {
         font-size: 14px;
+    }
+
+    .div-top h1 {
+        margin-left: 0;
     }
 }
 
@@ -215,5 +234,77 @@
 
     .nav-items a {
         font-size: .8em;
+    }
+}
+
+@media (max-width: 700px) {
+    .back-button {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .nav-items li {
+        margin-left: .8em;
+    }
+
+    .create-button button {
+        padding: 0px;
+        border: none;
+        font-size: 13px;
+        margin-left: 0px;
+        background: none;
+    }
+
+    .create-button button:hover {
+        transition: all .2s;
+        color: var(--color-background-back-button-navbar-hover);
+    }
+}
+
+@media (max-width: 650px) {
+    .div-logo-titulo .logo-adapti {
+        margin-left: 1.5em;
+    }
+}
+
+@media (max-width: 530px) {
+    .div-logo-titulo .logo-adapti {
+        margin-left: 1em;
+    }
+
+    .div-logo-titulo .titulo {
+        font-size: 1em;
+    }
+
+    .footer-items {
+        margin-right: 1.5em;
+    }
+
+    .footer-items li {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 460px) {
+    .header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+}
+
+@media (max-width: 382px) {
+    .div-form h2 {
+        padding: 5px;
+        font-size: 20px;
     }
 }

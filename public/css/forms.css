@@ -13,6 +13,7 @@ html {
 
 .main-container {
     display: flex;
+    align-items: center;
 }
 
 .div-form {
@@ -20,7 +21,6 @@ html {
     width: 100%;
     max-width: 430px;
     justify-self: center;
-    margin-left: 35%;
     border: 1px solid white;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
