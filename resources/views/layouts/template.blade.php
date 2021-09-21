@@ -25,7 +25,8 @@
 
         <nav class="nav-container">
             <ul class="nav-items">
-                @yield('home')
+                {{-- @yield('home') --}}
+                <li><a class="back-button" href="{{ route('movie.index') }}"><i class="fas fa-home"></i>Início</a></li>
                 <li><a class="create-button" href="{{ route('movie.create') }}"><button><i class="fas fa-plus-circle"></i>Adicionar filme</button></a></li>
             </ul>
         </nav>
